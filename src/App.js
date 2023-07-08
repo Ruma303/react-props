@@ -66,9 +66,9 @@ function App() {
 
 
         {/* Array Mapping */}
-        {array.map(user => {
+        {/* {array.map(user => {
             return <MyComponent {...user} key={user.img}/>
-        })}
+        })} */}
 
         {/* INDEX SCONSIGLIATO */}
         {/* {array.map((user, index) => {
@@ -79,6 +79,17 @@ function App() {
         {/* {array.map((user, index) => {
             return <MyComponent {...user} key={user.id}/>
         })} */}
+
+
+        {/* Destrutturazione nell'array mapping */}
+        {array.map(({id, name, age, img}) => {
+            return <MyComponent
+                key={id}
+                name={name}
+                age={age}
+                img={img}
+            />
+        })}
     </div>
   );
 }
